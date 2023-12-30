@@ -23,9 +23,17 @@
     ```
 
 2. **Initial Run**:
-After running `docker-compose up`, you might encounter an error due to the lack of the necessary database schema and user. To resolve this, proceed with the following steps.
 
-3. **Download Guacamole SQL Files**:
+   After running.
+    ```
+    docker-compose up
+    ```
+
+   You might encounter an error while accessing to url. Due to the lack of the necessary database schema and user.
+
+   To resolve this, proceed with the following steps.
+
+4. **Download Guacamole SQL Files**:
 - Visit the [Guacamole release page](https://guacamole.apache.org/releases/) and download the `guacamole-auth-jdbc-x.x.x.tar.gz` file for the latest version.
 - Extract the files:
   ```
@@ -34,13 +42,14 @@ After running `docker-compose up`, you might encounter an error due to the lack 
 - Navigate to the `mysql/schema` directory in the extracted folder.
 
 4. **Copy SQL Scripts to MySQL Container**:
-- Replace `<db-container-id>` with the actual container ID of your MySQL container.
+
+   Replace `<db-container-id>` with the actual container ID of your MySQL container.
     ```  
     docker cp 001-create-schema.sql <db-container-id>:/home/
     docker cp 002-create-admin-user.sql <db-container-id>:/home/
     ```
 
-5. **Execute SQL Scripts**:
+6. **Execute SQL Scripts**:
 - Access the MySQL container:
     ```
     docker exec -it <db-container-id> bash
