@@ -1,4 +1,4 @@
-# Guacamole Docker Deployment with Nginx Reverse Proxy with 2FA protection
+# Guacamole Container Deployment with Nginx Reverse Proxy with 2FA protection
 
 - This repository contains Docker configuration files for setting up Apache Guacamole, a clientless remote desktop gateway, using Docker. It includes an Nginx reverse proxy to make Guacamole accessible directly at the server's root URL (`http://IP` or `http://fqdn` or `http://127.0.0.1`). 
 - The configuration uses the latest versions of Guacamole and MySQL.
